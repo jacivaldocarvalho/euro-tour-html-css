@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EuroTour</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <head>
-        <span> EuroTour</span>
-        <nav>
-            <ul>
-                <li>Passagens</li>
-                <li>Hospedagem</li>
-                <li>Pontos Turísticos</li>
-            </ul>
-        </nav>
+        <div class="flex">
+            <div class="flex__item">
+                <span> EuroTour</span>
+            </div>
+            <div class="flex__item">
+                <nav>
+                    <ul>
+                        <li><a href="#">Passagens</a></li>
+                        <li><a href="#">Hospedagem</a></li>
+                        <li><a href="#">Pontos Turísticos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    
     </head>
     <main>
         <h1>Bem vindo a EuroTour</h1>
@@ -62,8 +70,8 @@
     
     </main>
     <footer>
-        <h2>EuroTour(c)</h2>
-        <ul>
+        <h2>EuroTour &copy;</h2>
+        <ul class="lista-sem-marcacao">
             <li>Facebook</li>
             <li>Instagran</li>
             <li>Linkedin</li>
