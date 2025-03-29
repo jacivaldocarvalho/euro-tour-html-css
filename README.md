@@ -34,7 +34,7 @@ O projeto possui a seguinte estrutura:
 ```
 /euro_tour
   ├── index.html  # Arquivo principal da página
-  ├── style.css   # Arquivo de estilos CSS
+  ├── /css/style.css   # Arquivo de estilos CSS
 ```
 
 ## Exemplo de Saída Esperada
