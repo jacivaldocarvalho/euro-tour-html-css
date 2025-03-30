@@ -58,9 +58,10 @@ Este projeto foi desenvolvido apenas com **HTML** e **CSS**, não havendo necess
 Este projeto é licenciado sob a **MIT License**. 
 
 ## Contato
-Fique à vontade para entrar em contato ou acompanhar as atualizações do projeto:
 
 - LinkedIn 👔: [https://www.linkedin.com/in/jacivaldo-carvalho](https://www.linkedin.com/in/jacivaldo-carvalho)
 - E-mail 📧: jacivaldo@email.com
 - GitHub 🐙: [https://github.com/jacivaldocarvalho](https://github.com/jacivaldocarvalho)
 - Medium ✍️: [https://medium.com/@jacivaldo](https://medium.com/@jacivaldo)
+
+Sempre aberto a novas conexões e oportunidades de aprendizado!
