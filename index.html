@@ -1,97 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EuroTour</title>
+    <meta name="description" content="Explore six European destinations with EuroTour and find links to flights, accommodation, and attractions.">
+    <title>EuroTour | Explore Europe</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
-        <span> EuroTour</span>
-        <nav>
+        <span class="brand">EuroTour</span>
+        <nav aria-label="Travel services">
             <ul class="social-links">
                 <!-- Passagens -->
-                <li><a href="https://www.melhoresdestinos.com.br" target="_blank">
-
-                    <img src="https://cdn-icons-png.flaticon.com/512/1995/1995960.png" alt="Passagens">
+                <li><a href="https://www.melhoresdestinos.com.br" target="_blank" rel="noopener noreferrer" aria-label="Flights (opens in a new tab)">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1995/1995960.png" alt="" width="50" height="50">
+                    <span>Flights</span>
                 </a></li>
-        
                 <!-- Hospedagem -->
-                <li><a href="https://www.booking.com" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3009/3009489.png" alt="Hospedagem">
+                <li><a href="https://www.booking.com" target="_blank" rel="noopener noreferrer" aria-label="Accommodation (opens in a new tab)">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3009/3009489.png" alt="" width="50" height="50">
+                    <span>Accommodation</span>
                 </a></li>
-        
                 <!-- Pontos Turísticos -->
-                <li><a href="https://www.tripadvisor.com.br/Attractions" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3942/3942076.png" alt="Pontos Turísticos">
+                <li><a href="https://www.tripadvisor.com.br/Attractions" target="_blank" rel="noopener noreferrer" aria-label="Attractions (opens in a new tab)">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3942/3942076.png" alt="" width="50" height="50">
+                    <span>Attractions</span>
                 </a></li>
             </ul>
         </nav>
-    
     </header>
-    <main>
-        <h1>Bem vindo a EuroTour</h1>
-        <h2>Sobre</h2>
-        <p> <strong>EuroTour</strong> é um site que ajuda você a planejar sua viagem para a Europa, desde a compra das passagens,
-        até a visita aos pontos turísticos mais importantes de cada região!</p>
-
-        <section>
-            <div class="card">
-                <img src="https://itaseguroviagem.com.br/wp-content/uploads/2023/06/pontos-turisticos-paris.jpg" alt="Paris">
-                <h3>Paris, França</h3>
-                <p>Paris é conhecida por seus icônicos monumentos, como a Torre Eiffel e o Museu do Louvre. A cidade também é famosa pela sua culinária refinada e pela moda. Se você gosta de cultura e arte, Paris é o lugar certo para você.</p>
-            </div>
-    
-            <div class="card">
-                <img src="https://blog.assistentedeviagem.com.br/wp-content/uploads/2018/12/pontos-turisticos-em-roma-5.jpg" alt="Roma">
-                <h3>Roma, Itália</h3>
-                <p>Roma é uma cidade que mistura o antigo e o moderno, com seus monumentos históricos como o Coliseu e o Fórum Romano. A cidade também oferece uma culinária deliciosa, com pratos autênticos italianos.</p>
-            </div>
-    
-            <div class="card">
-                <img src="https://www.civitatis.com/blog/wp-content/uploads/2024/01/shutterstock_607235345-scaled.jpg" alt="Londres">
-                <h3>Londres, Reino Unido</h3>
-                <p>Londres é uma cidade vibrante, cheia de história e cultura. Você pode visitar o Palácio de Buckingham, a Torre de Londres e a famosa London Eye. Além disso, há uma infinidade de museus e teatros para explorar.</p>
-            </div>
-    
-            <div class="card">
-                <img src="https://statemag.state.gov/wp-content/uploads/2024/05/0624POM-A-3-scaled.jpg" alt="Barcelona">
-                <h3>Barcelona, Espanha</h3>
-                <p>Barcelona é famosa pela sua arquitetura única, como as obras de Gaudí, incluindo a Sagrada Família. Além disso, a cidade tem belas praias, uma vida noturna animada e uma rica tradição cultural.</p>
-            </div>
-    
-            <div class="card">
-                <img src="https://www.lelongweekend.com/wp-content/uploads/2023/10/LLW-Amsterdam-scaled.jpeg" alt="Amsterdã">
-                <h3>Amsterdã, Países Baixos</h3>
-                <p>Amsterdã é uma cidade encantadora, conhecida pelos seus canais pitorescos e museus de renome, como o Museu Van Gogh e a Casa de Anne Frank. A cidade oferece também uma atmosfera relaxante e descontraída.</p>
-            </div>
-    
-            <div class="card">
-                <img src="https://imgmd.net/images/v1/guia/2917108/berlim.jpg" alt="Berlim">
-                <h3>Berlim, Alemanha</h3>
-                <p>Berlim é uma cidade cheia de história e cultura. O Muro de Berlim, o Portão de Brandemburgo e o Memorial do Holocausto são apenas alguns dos marcos históricos que tornam esta cidade única. É também um centro moderno de arte e inovação.</p>
+    <main id="main-content" tabindex="-1">
+        <h1>Welcome to EuroTour</h1>
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p><strong>EuroTour</strong> helps you plan your trip to Europe, from finding flights to exploring the most memorable attractions in each region.</p>
+        </section>
+        <section aria-labelledby="destinations-heading">
+            <h2 id="destinations-heading">Explore the destinations</h2>
+            <div class="destination-grid">
+                <article class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Eiffel_Tower_%289257105067%29.jpg" alt="The Eiffel Tower in Paris" width="800" height="600" decoding="async">
+                    <h3>Paris, France</h3>
+                    <p>Paris is known for its iconic landmarks, including the Eiffel Tower and the Louvre Museum. The city is also famous for its refined cuisine and fashion. If you enjoy culture and art, Paris is the place for you.</p>
+                </article>
+                <article class="card">
+                    <img src="https://blog.assistentedeviagem.com.br/wp-content/uploads/2018/12/pontos-turisticos-em-roma-5.jpg" alt="The Colosseum in Rome" width="800" height="600" loading="lazy" decoding="async">
+                    <h3>Rome, Italy</h3>
+                    <p>Rome brings together the ancient and the modern, with historic landmarks such as the Colosseum and the Roman Forum. The city also offers delicious cuisine and authentic Italian dishes.</p>
+                </article>
+                <article class="card">
+                    <img src="https://www.civitatis.com/blog/wp-content/uploads/2024/01/shutterstock_607235345-scaled.jpg" alt="Big Ben and a red telephone box in London" width="800" height="600" loading="lazy" decoding="async">
+                    <h3>London, United Kingdom</h3>
+                    <p>London is a vibrant city full of history and culture. Visit Buckingham Palace, the Tower of London, and the famous London Eye, or explore the city's many museums and theatres.</p>
+                </article>
+                <article class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Barcelona_-_panor%C3%A1mica.jpg" alt="A panoramic view of Barcelona" width="800" height="600" loading="lazy" decoding="async">
+                    <h3>Barcelona, Spain</h3>
+                    <p>Barcelona is famous for its distinctive architecture, including Gaudí's Sagrada Família. The city also has beautiful beaches, lively nightlife, and a rich cultural tradition.</p>
+                </article>
+                <article class="card">
+                    <img src="https://www.lelongweekend.com/wp-content/uploads/2023/10/LLW-Amsterdam-scaled.jpeg" alt="Canal houses along the water in Amsterdam" width="800" height="600" loading="lazy" decoding="async">
+                    <h3>Amsterdam, Netherlands</h3>
+                    <p>Amsterdam is known for its picturesque canals and celebrated museums, including the Van Gogh Museum and the Anne Frank House. The city also offers a relaxed and welcoming atmosphere.</p>
+                </article>
+                <article class="card">
+                    <img src="https://imgmd.net/images/v1/guia/2917108/berlim.jpg" alt="The Brandenburg Gate in Berlin" width="800" height="600" loading="lazy" decoding="async">
+                    <h3>Berlin, Germany</h3>
+                    <p>Berlin is full of history and culture. The Berlin Wall, Brandenburg Gate, and Holocaust Memorial are among its defining landmarks. It is also a modern centre for art and innovation.</p>
+                </article>
             </div>
         </section>
-    
     </main>
     <footer>
-        <ul class="social-links">
-            <!-- Facebook -->
-            <li><a href="https://www.facebook.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook">
-            </a></li>
-            <!-- Instagran -->
-            <li><a href="https://www.instagram.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram">
-            </a></li>
-            <!-- Linkedin -->
-            <li><a href="https://www.linkedin.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn">
-            </a></li>
-        </ul>
-        <br>
-        <p>&copy; 2024 Todos os direitos reservados.</p>
+        <nav aria-label="Social media">
+            <ul class="social-links">
+                <!-- Facebook -->
+                <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)">Facebook</a></li>
+                <!-- Instagram -->
+                <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)">Instagram</a></li>
+                <!-- LinkedIn -->
+                <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 EuroTour. All rights reserved.</p>
     </footer>
 </body>
 </html>
