@@ -1,5 +1,6 @@
 # EuroTour
 
+[![HTML and CSS validation](https://github.com/jacivaldocarvalho/euro-tour-html-css/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jacivaldocarvalho/euro-tour-html-css/actions/workflows/ci.yml)
 [![Deploy website](https://github.com/jacivaldocarvalho/euro-tour-html-css/actions/workflows/deploy-pages.yml/badge.svg?branch=main)](https://github.com/jacivaldocarvalho/euro-tour-html-css/actions/workflows/deploy-pages.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -34,11 +35,18 @@ Open `index.html` directly in your browser. To edit the page, use a text editor 
 euro-tour-html-css/
 ├── .github/
 │   └── workflows/
+│       ├── ci.yml            # HTML and CSS validation
 │       └── deploy-pages.yml  # GitHub Pages deployment
+├── .gitignore
+├── .htmlvalidate.json        # HTML validation rules
+├── .nvmrc                    # Node.js major version for development
+├── .stylelintrc.json         # CSS validation rules
 ├── css/
 │   └── styles.css   # Page styles and responsive rules
 ├── index.html      # Website content and navigation
 ├── LICENSE         # MIT license
+├── package.json    # Development tools and validation commands
+├── package-lock.json
 └── README.md
 ```
 
@@ -48,7 +56,18 @@ euro-tour-html-css/
 
 Edit `index.html` for content and markup, and `css/styles.css` for presentation.
 
-There are currently no automated tests or lint checks. The GitHub Actions workflow handles deployment only; it does not validate HTML or CSS. After making changes:
+Validation requires Node.js 24 (24.8.0 or later within that major version) and npm. These tools are needed only for development checks; viewing the website still requires no installation or build. If you use nvm, run `nvm install` and `nvm use` to select the version in `.nvmrc`.
+
+```bash
+npm ci --ignore-scripts --no-fund --no-audit
+npm run lint
+```
+
+`npm run lint:html` runs HTML-Validate on root-level HTML files. `npm run lint:css` runs Stylelint on CSS files under `css/`, with warnings treated as failures. Both validators use their recommended configurations. Commit `package-lock.json` alongside intentional dependency updates so installations remain reproducible.
+
+The **Validate HTML and CSS** workflow runs on pushes to `main` and `develop`, pull requests targeting `main`, and manual runs. It uses the same install and lint commands shown above. Static checks do not test browser behaviour, image availability, or complete accessibility conformance. There is no automated browser test suite.
+
+After making changes, also perform these browser checks:
 
 1. Open the page in a browser and check that the stylesheet and images load.
 2. Check the header, destination cards, and footer at narrow and wide viewport sizes.
@@ -57,11 +76,17 @@ There are currently no automated tests or lint checks. The GitHub Actions workfl
 
 The destination grid uses three columns above 768px, two columns from 481px to 768px, and one column at 480px or below. Check the layout at 320px, 768px, and 1280px, including with browser zoom enabled. The first keyboard link skips navigation and moves focus to the main content.
 
-These manual checks do not replace HTML/CSS validation or a full accessibility review.
+These manual checks complement linting and do not replace a full accessibility review.
+
+### Known tooling advisory
+
+As of October 4, 2026, `npm audit` reports [GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm) in Stylelint's transitive `braces` dependency, with no patched release available. Deeply nested brace patterns can terminate the validation process. The npm scripts use fixed glob patterns; do not replace them with untrusted input. These development dependencies are not deployed with the website. Recheck the advisory when updating validation tools.
 
 ## Deployment
 
 The deployment workflow publishes `index.html` and `css/` from `main` to GitHub Pages. It runs on pushes to `main` and can also be triggered manually from that branch. Changes on `develop` and pull requests are not published.
+
+Deployment runs the same HTML and CSS checks before preparing or uploading the website artifact. A failed installation or lint check stops publication. Validation tools, configuration files, and `node_modules/` are not included in the published artifact.
 
 GitHub Pages is enabled with **GitHub Actions** as the publishing source in **Settings > Pages**. The workflow uses the `github-pages` environment and the repository's `GITHUB_TOKEN`; no additional deployment secret is required.
 
