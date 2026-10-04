@@ -1,67 +1,67 @@
-# Euro Tour - HTML & CSS Study Project
+# EuroTour
 
-## Índice
-- [Descrição](#descrição)
-- [Como Usar](#como-usar)
-- [Exemplo de Saída Esperada](#exemplo-de-saída-esperada)
-- [Pré-Requisitos](#pré-requisitos)
-- [Licença](#licença)
-- [Contato](#contato)
+EuroTour is an educational static website built with HTML and CSS. It introduces six European destinations and links to external services for flights, accommodation, and attractions.
 
-## Descrição
-O **Euro Tour** é um projeto de estudo desenvolvido utilizando **HTML** e **CSS**. O objetivo principal deste projeto foi criar um site simples e elegante, focado em aplicar os conceitos aprendidos durante o estudo dessas linguagens. Ele pode ser útil para desenvolvedores iniciantes ou para quem está aprendendo a estrutura básica de uma página web, explorando como organizar conteúdo e aplicar estilos com CSS.
+The project demonstrates page structure, navigation, destination cards, and responsive styling without JavaScript or frameworks. The website content is currently in Portuguese.
 
-Este projeto não depende de frameworks ou bibliotecas adicionais, e visa ser uma página estática com uma estrutura simples de layout, ideal para quem está começando a se familiarizar com o desenvolvimento front-end.
+## Requirements
 
-## Como Usar
-### Passos para Visualização
-1. **Clone o repositório**:
-   Para obter uma cópia local do projeto, use o seguinte comando no seu terminal:
-   ```bash
-   git clone https://github.com/jacivaldocarvalho/euro_tour.git
-   ```
+- A modern web browser.
+- Git to clone the repository, or a downloaded copy of the source files.
+- An internet connection to load third-party images and visit external links.
 
-2. **Abra o arquivo `index.html`**:
-   Depois de clonar o repositório, navegue até a pasta onde o projeto foi clonado e abra o arquivo `index.html` no seu navegador. 
-   
-   O site será exibido como uma página estática sem necessidade de servidores ou ferramentas externas.
+No package installation, build step, or application server is required.
 
-3. **Personalize o projeto (opcional)**:
-   Você pode modificar o código HTML ou CSS para ajustar o conteúdo ou a aparência do site de acordo com sua necessidade ou interesse.
+## View locally
 
-### Estrutura de Pastas
-O projeto possui a seguinte estrutura:
-```
-/euro_tour
-  ├── index.html  # Arquivo principal da página
-  ├── /css/style.css   # Arquivo de estilos CSS
+```bash
+git clone https://github.com/jacivaldocarvalho/euro-tour-html-css.git
+cd euro-tour-html-css
 ```
 
-## Exemplo de Saída Esperada
-Quando o arquivo `index.html` é aberto em um navegador, você verá uma página com uma interface simples, contendo texto e imagens formatadas conforme o estilo CSS definido no projeto. O layout é limpo e direto, com uma aparência moderna, adequada para um site de apresentação ou portfólio.
+Open `index.html` directly in your browser. To edit the page, use a text editor and refresh the browser after saving changes.
 
-### Exemplo de visualização no navegador:
-- Uma página com cabeçalho e rodapé estilizados.
-- Conteúdo centralizado com fontes e cores aplicadas por CSS.
+## Project structure
 
-## Pré-Requisitos
-Este projeto foi desenvolvido apenas com **HTML** e **CSS**, não havendo necessidade de dependências externas. Para visualizar e personalizar o projeto, você precisará apenas de um **navegador web** moderno, como:
+```text
+euro-tour-html-css/
+├── css/
+│   └── styles.css   # Page styles and responsive rules
+├── index.html      # Website content and navigation
+├── LICENSE         # MIT license
+└── README.md
+```
 
-- Google Chrome
-- Mozilla Firefox
-- Microsoft Edge
+`index.html` loads `css/styles.css` using a relative path. Keep that directory structure when copying or serving the website.
 
-**Recomendações**:
-- Ter o código HTML e CSS básico instalado em seu editor de texto favorito (ex: Visual Studio Code, Sublime Text, Atom).
-  
-## Licença
-Este projeto é licenciado sob a **MIT License**. 
+## Development and validation
 
-## Contato
+Edit `index.html` for content and markup, and `css/styles.css` for presentation.
 
-- LinkedIn 👔: [https://www.linkedin.com/in/jacivaldo-carvalho](https://www.linkedin.com/in/jacivaldo-carvalho)
-- E-mail 📧: jacivaldo@email.com
-- GitHub 🐙: [https://github.com/jacivaldocarvalho](https://github.com/jacivaldocarvalho)
-- Medium ✍️: [https://medium.com/@jacivaldo](https://medium.com/@jacivaldo)
+There are currently no automated tests, lint checks, or CI workflows. After making changes:
 
-Sempre aberto a novas conexões e oportunidades de aprendizado!
+1. Open the page in a browser and check that the stylesheet and images load.
+2. Check the header, destination cards, and footer at narrow and wide viewport sizes.
+3. Navigate through the links with the keyboard and check that focus is visible.
+4. Verify that external links still point to the intended destinations.
+
+These manual checks do not replace HTML/CSS validation or a full accessibility review.
+
+## Limitations
+
+- The page provides informational content and external links; it does not process bookings or user data.
+- All destination images and navigation icons are loaded from third-party websites. They may become unavailable or change independently of this repository.
+- Viewing the page offline does not guarantee that external images will be displayed.
+- The repository's MIT license does not establish permission to redistribute third-party images. Verify their source licenses before downloading or bundling them.
+
+## License
+
+The repository is licensed under the [MIT License](LICENSE).
+
+## Author
+
+**Jacivaldo Carvalho**
+
+Telecommunications Engineer | DevOps Engineer | SRE | Networking
+
+[GitHub](https://github.com/jacivaldocarvalho) | [LinkedIn](https://www.linkedin.com/in/jacivaldocarvalho) | [Website](https://www.jacivaldocarvalho.com/)
