@@ -25,6 +25,9 @@ Open `index.html` directly in your browser. To edit the page, use a text editor 
 
 ```text
 euro-tour-html-css/
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml  # GitHub Pages deployment
 ├── css/
 │   └── styles.css   # Page styles and responsive rules
 ├── index.html      # Website content and navigation
@@ -38,7 +41,7 @@ euro-tour-html-css/
 
 Edit `index.html` for content and markup, and `css/styles.css` for presentation.
 
-There are currently no automated tests, lint checks, or CI workflows. After making changes:
+There are currently no automated tests or lint checks. The GitHub Actions workflow handles deployment only; it does not validate HTML or CSS. After making changes:
 
 1. Open the page in a browser and check that the stylesheet and images load.
 2. Check the header, destination cards, and footer at narrow and wide viewport sizes.
@@ -46,6 +49,16 @@ There are currently no automated tests, lint checks, or CI workflows. After maki
 4. Verify that external links still point to the intended destinations.
 
 These manual checks do not replace HTML/CSS validation or a full accessibility review.
+
+## Deployment
+
+The deployment workflow publishes `index.html` and `css/` from `main` to GitHub Pages. It runs on pushes to `main` and can also be triggered manually from that branch. Changes on `develop` and pull requests are not published.
+
+To enable deployment after the workflow is merged, select **GitHub Actions** as the publishing source in **Settings > Pages**. The workflow uses the `github-pages` environment and the repository's `GITHUB_TOKEN`; no additional deployment secret is required.
+
+The expected site URL is https://jacivaldocarvalho.github.io/euro-tour-html-css/. Publication is pending; the URL has not yet been verified. The workflow run will report the deployed URL once Pages is enabled and deployment succeeds.
+
+If the initial run fails because Pages is not enabled, configure the publishing source and rerun the workflow from `main`.
 
 ## Limitations
 
