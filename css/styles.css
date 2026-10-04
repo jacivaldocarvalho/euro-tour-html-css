@@ -16,12 +16,6 @@ a {
     text-underline-offset: 0.2em;
 }
 
-a:focus-visible,
-main:focus-visible {
-    outline: 3px solid #001909;
-    outline-offset: 4px;
-}
-
 .skip-link {
     position: absolute;
     top: 0.5rem;
@@ -57,6 +51,12 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
+}
+
+a:focus-visible,
+main:focus-visible {
+    outline: 3px solid #001909;
+    outline-offset: 4px;
 }
 
 h1 {
